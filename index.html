@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestFlow | Login Page Test Case Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="title-section">
+                <h1>🔐 TestFlow</h1>
+                <p>Login Page · Interactive Test Case Execution Suite</p>
+            </div>
+            <button class="reset-btn" id="resetAllBtn">⟳ Reset All Tests</button>
+        </div>
+
+        <!-- Two-column layout -->
+        <div class="dashboard-grid">
+            <!-- LEFT PANEL: Live Login Simulator -->
+            <div class="simulator-card">
+                <div class="card-header">
+                    <span>🧪 Login Simulator</span>
+                    <span class="badge">Test environment</span>
+                </div>
+                <div class="simulator-body">
+                    <div class="input-group">
+                        <label>Username / Email</label>
+                        <input type="text" id="simUsername" placeholder="e.g., admin@testflow.com" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="simPassword" placeholder="••••••••">
+                    </div>
+                    <button class="login-action-btn" id="simLoginBtn">→ Login</button>
+                    <div id="simMessageArea" class="message-area"></div>
+                    <div class="sim-hint">
+                        <span>💡 Valid demo: <strong>admin@testflow.com</strong> / <strong>SecurePass123</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT PANEL: Test Cases Table -->
+            <div class="testcases-card">
+                <div class="card-header">
+                    <span>📋 Test Cases – Login Page</span>
+                    <span class="badge" id="statsBadge">0/4 executed</span>
+                </div>
+                <div class="table-wrapper">
+                    <table class="test-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Description</th>
+                                <th>Steps</th>
+                                <th>Expected Result</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="testCasesBody">
+                            <!-- Dynamic rows from JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer-note">
+                    <span>✅ Click 'Run Test' to automatically execute and validate each scenario</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-note">
+            <div class="info-icon">🛡️</div>
+            <div>Security simulation: SQL injection test demonstrates error handling & login failure prevention.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
